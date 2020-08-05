@@ -6,10 +6,19 @@ var Point = /** @class */ (function () {
     Point.prototype.draw = function () {
         console.log('X: ' + this.x + ' Y: ' + this.y);
     };
+    Point.prototype.getX = function () {
+        return this.x;
+    };
+    Point.prototype.setX = function (value) {
+        if (value < 0)
+            throw new Error('Value cannot be less than 0.');
+        this.x = value;
+    };
     return Point;
 }());
 var point = new Point(1, 2);
 point.draw();
+console.log(point.getX());
 var num = 1;
 var count = 2;
 var ColorRed = 0;
