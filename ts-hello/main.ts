@@ -1,24 +1,6 @@
-class Point {
+import { Point } from './point';
 
-  constructor(private x: number, private y?: number) { }
-
-  draw() {
-    console.log('X: ' + this.x + ' Y: ' + this.y);
-  }
-
-  getX() {
-    return this.x;
-  }
-
-  setX(value: number) {
-    if (value < 0)
-      throw new Error('Value cannot be less than 0.');
-
-      this.x = value;
-  }
-}
-
-let point = new Point(1, 2);
+const point = new Point(1, 2);
 point.draw();
 console.log(point.getX());
 
